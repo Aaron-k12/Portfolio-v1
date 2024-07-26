@@ -7,6 +7,18 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "wXupy8raKmSEKEM_Y",
+			});
+		})();
+		</script>
+		<script src="assets/js/script.js"></script>
+	
 	<body class="is-preload">
 
 
@@ -83,6 +95,27 @@
 						<div class="inner">
 							<h2>Get in touch</h2>
 							<div class="split style1">
+							 <section>
+									<form>
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" required/>
+											</div>
+											<div class="field half">
+												<label for="email_id">Email</label>
+												<input type="text" name="email_id" id="email" required />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5" required></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><button type="submit" class="button submit" onClick="sendMail()">Send Mesge</button></li>
+										</ul>
+									</form>
+								</section> 
 								<section>
 									<ul class="contact">
 										<li>
@@ -129,6 +162,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
+			
+ 
 	</body>
 </html>
